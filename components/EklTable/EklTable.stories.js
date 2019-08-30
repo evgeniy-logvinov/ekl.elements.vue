@@ -24,3 +24,20 @@ storiesOf('EklTable', module)
             items
         })
     }))
+    .add('with 7 items + header', () => ({
+        components: { EklTable },
+        template:
+            `
+          <EklTable
+            :header="header"
+            :items="items"
+          />
+        `,
+        data: () => ({
+            header: [
+                'Name',
+                'Email'
+            ],
+            items
+        })
+    }))
