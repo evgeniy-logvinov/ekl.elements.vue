@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/vue'
-import ElkTableRow from './ElkTableRow'
+import EklTableRow from './EklTableRow'
 
-storiesOf('ElkTableRow', module)
+storiesOf('EklTableRow', module)
   .add('normal', () => ({
-    components: { ElkTableRow },
+    components: { EklTableRow },
     template:
       `
-      <ElkTableRow
+      <EklTableRow
         :values="values"
       />
     `,

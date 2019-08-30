@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "ElkTableRow",
+  name: "EklTableRow",
   props: {
     values: {
       type: Array,

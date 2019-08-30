@@ -1,0 +1,8 @@
+{
+    "name": "@eklogvinov/ekl-table-row",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "ae0ee5f5facc0755ca684aed15be548b1e7499ac"
+}
