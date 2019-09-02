@@ -5,9 +5,7 @@
         "access": "public"
     },
     "dependencies": {
+        "@eklogvinov/ekl-table-header": "^1.0.1",
         "@eklogvinov/ekl-table-row": "^1.0.1"
-    },
-    "scripts": {
-        "test": "../../node_modules/.bin/jest --colors"
     }
 }

@@ -36,5 +36,6 @@
     "transform": {
       ".*\\.(vue)$": "vue-jest"
     }
-  }
+  },
+  "license": "MIT"
 }

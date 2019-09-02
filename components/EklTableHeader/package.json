@@ -1,5 +1,5 @@
 {
-    "name": "@eklogvinov/ekl-table-row",
+    "name": "@eklogvinov/ekl-table-header",
     "version": "1.0.1",
     "publishConfig": {
         "access": "public"

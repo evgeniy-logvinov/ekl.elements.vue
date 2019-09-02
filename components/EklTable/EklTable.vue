@@ -1,14 +1,14 @@
 <template>
   <table>
-    <tr>
-      <th v-for="(label, index) in header" :key="index">{{ label }}</th>
-    </tr>
+    <EklTableHeader :values="header" />
     <EklTableRow v-for="(values, index) in items" :key="index" :values="values" />
   </table>
 </template>
 
 <script>
 import EklTableRow from "@eklogvinov/ekl-table-row/EklTableRow";
+import EklTableHeader from "@eklogvinov/ekl-table-header/EklTableHeader";
+
 export default {
   name: "EklTable",
   props: {
@@ -21,15 +21,10 @@ export default {
     }
   },
   components: {
-    EklTableRow
+    EklTableRow,
+    EklTableHeader,
   }
 };
 </script>
 <style>
-th {
-  text-align: left;
-  padding: 8px;
-  font-size: 13px;
-  color: #8d8d92;
-}
 </style>
