@@ -4,5 +4,8 @@
     "publishConfig": {
         "access": "public"
     },
+    "scripts": {
+        "test": "../../node_modules/.bin/jest --colors"
+    },
     "gitHead": "ae0ee5f5facc0755ca684aed15be548b1e7499ac"
 }
