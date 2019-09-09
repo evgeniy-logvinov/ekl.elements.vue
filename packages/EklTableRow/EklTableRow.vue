@@ -4,16 +4,17 @@
   </tr>
 </template>
 
-<script>
-export default {
-  name: "EklTableRow",
-  props: {
-    values: {
-      type: Array,
-      required: true
-    }
-  }
-};
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+
+@Component
+export default class EklTableRow extends Vue {
+  @Prop({
+    type: Array,
+    required: true
+  })
+  private values!: string[];
+}
 </script>
 
 <style scoped>

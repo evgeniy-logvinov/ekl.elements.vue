@@ -1,0 +1,36 @@
+{
+    "name": "@eklogvinov/ekl-table-header",
+    "version": "1.0.1",
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "lint": "vue-cli-service lint",
+        "test:unit": "vue-cli-service test:unit --color"
+    },
+    "gitHead": "ae0ee5f5facc0755ca684aed15be548b1e7499ac",
+    "dependencies": {
+        "core-js": "^3.2.1",
+        "vue": "^2.6.10",
+        "vue-class-component": "^7.1.0",
+        "vue-property-decorator": "^8.2.2"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "@vue/cli-plugin-babel": "^3.11.0",
+        "@vue/cli-plugin-typescript": "^3.11.0",
+        "@vue/cli-plugin-unit-jest": "^3.11.0",
+        "@vue/cli-service": "^3.11.0",
+        "@vue/test-utils": "^1.0.0-beta.29",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.0.6",
+        "jest": "^24.9.0",
+        "lint-staged": "^9.2.5",
+        "path": "^0.12.7",
+        "sass": "^1.23.0-module.beta.1",
+        "sass-loader": "^8.0.0",
+        "ts-jest": "^24.0.2",
+        "typescript": "^3.6.2",
+        "vue-template-compiler": "^2.6.10"
+    }
+}
