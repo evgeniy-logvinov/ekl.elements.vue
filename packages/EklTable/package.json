@@ -1,12 +1,12 @@
 {
     "name": "@eklogvinov/ekl-table",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publishConfig": {
         "access": "public"
     },
     "dependencies": {
-        "@eklogvinov/ekl-table-header": "^1.0.1",
-        "@eklogvinov/ekl-table-row": "^1.0.1",
+        "@eklogvinov/ekl-table-header": "^1.0.2",
+        "@eklogvinov/ekl-table-row": "^1.0.2",
         "core-js": "^3.2.1",
         "vue": "^2.6.10",
         "vue-class-component": "^7.1.0",
