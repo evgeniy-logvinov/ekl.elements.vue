@@ -10,6 +10,9 @@
     },
     "gitHead": "ae0ee5f5facc0755ca684aed15be548b1e7499ac",
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.22",
+        "@fortawesome/free-solid-svg-icons": "^5.10.2",
+        "@fortawesome/vue-fontawesome": "^0.1.7",
         "core-js": "^3.2.1",
         "vue": "^2.6.10",
         "vue-class-component": "^7.1.0",

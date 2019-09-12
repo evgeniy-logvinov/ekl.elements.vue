@@ -1,29 +1,61 @@
 <template>
-  <tr>
-    <td v-for="(value, index) in values" :key="index">{{ value }}</td>
-  </tr>
+  <table class="table-body">
+    <tr v-for="row in rows" class="cell" :key="row.name.first">
+      <td
+        v-for="column in columns"
+        :key="column.name"
+        :width="column.width ? column.width : '100'"
+        class="cell"
+      >
+        <span class="content" v-text="val(row, column.field)"></span>
+      </td>
+    </tr>
+  </table>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import _ from "lodash";
 
 @Component
 export default class EklTableRow extends Vue {
   @Prop({
     type: Array,
-    required: true
+    required: true,
+    default: () => []
   })
-  private values!: string[];
+  private columns!: any[];
+
+  @Prop({
+    type: Array,
+    required: true,
+    default: () => []
+  })
+  private rows!: any[];
+
+  private val(object, attrib) {
+    return _.get(object, attrib);
+  }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.cell {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  // max-width: 1px;
+  min-width: 0;
+  padding: 8px;
+  span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 tr {
   background-color: white;
   border-radius: 4px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08);
-}
-td {
-  padding: 8px;
 }
 </style>
