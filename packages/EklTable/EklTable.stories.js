@@ -23,10 +23,6 @@ const rows = [
     },
     {
         name: { title: 'Amiah Burton', first: 'Amiah', last: 'Burton' },
-        dob: '01.13.2016'
-    },
-    {
-        name: { title: 'Amiah Burton', first: 'Amiah', last: 'Burton' },
         dob: '03.13.2016'
     },
     {
@@ -106,41 +102,7 @@ storiesOf('EklTable', module)
                     default: array('rows', rows)
                 },
                 columns: {
-                    default: array('columns',
-                        [
-                            {
-                                name: "title",
-                                label: "Title",
-                                field: "name.title",
-                                width: "100",
-                                type: "text",
-                                isMandatory: true
-                            },
-                            {
-                                name: "firstName",
-                                label: "First Name",
-                                field: "name.first",
-                                width: "200",
-                                type: "text",
-                                isMandatory: true
-                            },
-                            {
-                                name: "lastName",
-                                label: "Last Name",
-                                field: "name.last",
-                                width: "200",
-                                type: "text",
-                                isMandatory: true
-                            },
-                            {
-                                name: "dataOfBirth",
-                                label: "Date of Birth",
-                                field: "dob",
-                                type: "date",
-                                width: "200",
-                                format: "yyyy-MM-dd"
-                            }
-                        ])
+                    default: array('columns', columns)
                 },
             },
             template:
@@ -152,23 +114,33 @@ storiesOf('EklTable', module)
                 sidebar: EklTableRm,
             },
         })
-    // .add('with 7 items + long header', () => {
-    //     return {
-    //         components: { EklTable },
-    //         props: {
-    //             items: {
-    //                 default: array('items', items)
-    //             },
-    //             header: {
-    //                 default: array('header', [{ name: 'Name' }, { name: 'very very very long name for header' }])
-    //             },
-    //         },
-    //         template:
-    //             `<EklTable :header="header" :items="items" />`,
-    //     }
-    // },
-    //     {
-    //         readme: {
-    //             sidebar: EklTableRm,
-    //         },
-    //     })
+    .add('with 7 rows + long column', () => {
+        const longColumns = [...columns];
+        console.log('columns', longColumns)
+        console.log('columns2', longColumns.splice(0, 1, {
+            name: "title",
+            label: "very very very long name for header",
+            field: "name.title",
+            width: "100",
+            type: "text",
+            isMandatory: true
+        }))
+        return {
+            components: { EklTable },
+            props: {
+                rows: {
+                    default: array('row', rows)
+                },
+                columns: {
+                    default: array('columns', longColumns)
+                },
+            },
+            template:
+                `<EklTable :columns="columns" :rows="rows" />`,
+        }
+    },
+        {
+            readme: {
+                sidebar: EklTableRm,
+            },
+        })
