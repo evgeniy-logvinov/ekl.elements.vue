@@ -1,6 +1,6 @@
 <template>
-  <table class="table-body">
-    <tr v-for="row in rows" class="cell" :key="row.name.first">
+  <tbody class="table-body">
+    <tr v-for="row in rows" :key="row.name.first">
       <td
         v-for="column in columns"
         :key="column.name"
@@ -10,7 +10,7 @@
         <span class="content" v-text="val(row, column.field)"></span>
       </td>
     </tr>
-  </table>
+  </tbody>
 </template>
 
 <script lang="ts">
@@ -42,19 +42,20 @@ export default class EklTableRow extends Vue {
 <style scoped lang="scss">
 .table-body {
   width: 100%;
-  // .cell {
-  //   white-space: nowrap;
-  //   text-overflow: ellipsis;
-  //   overflow: hidden;
-  //   // max-width: 1px;
-  //   min-width: 0;
-  //   padding: 8px;
-  //   span {
-  //     white-space: nowrap;
-  //     overflow: hidden;
-  //     text-overflow: ellipsis;
-  //   }
-  // }
+  .cell {
+    // white-space: nowrap;
+    text-align: left;
+    //   text-overflow: ellipsis;
+    //   overflow: hidden;
+    //   // max-width: 1px;
+    //   min-width: 0;
+    padding: 8px;
+    // span {
+    //   white-space: nowrap;
+    //   overflow: hidden;
+    //   text-overflow: ellipsis;
+    // }
+  }
   // tr {
   //   background-color: white;
   //   border-radius: 4px;
