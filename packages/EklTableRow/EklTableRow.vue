@@ -56,5 +56,16 @@ export default class EklTableRow extends Vue {
     border-radius: 4px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08);
   }
+  tr:hover {
+    border: 2px inset #f5f5f5;
+  }
+  tr:nth-child(even):hover {
+    border: 2px inset #f5f5f5;
+  }
+  tr:nth-child(even) {
+    background-color: #dcdcdc;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08);
+  }
 }
 </style>

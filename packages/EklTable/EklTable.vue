@@ -140,5 +140,6 @@ export default class EklTable extends Vue {
 <style scoped lang="scss">
 .table {
   width: 100%;
+  border-collapse: collapse;
 }
 </style>
