@@ -10,7 +10,7 @@ const rows = [
         dob: '11.11.2011'
     },
     {
-        name: { title: 'Leonardo Payne', first: 'Leonardo', last: 'Payne' },
+        name: { title: 'Leonardo Paynessssssssssssssssssssss', first: 'Leonardo', last: 'Payne' },
         dob: '12.12.2012'
     },
     {

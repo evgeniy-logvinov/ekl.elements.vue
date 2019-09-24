@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <table class="table">
     <EklTableHeader v-if="hasHeader" :columns="columns" />
     <EklTableRow :columns="columns" :rows="rows" />
-  </div>
+  </table>
 </template>
 
 <script lang="ts">
@@ -138,4 +138,7 @@ export default class EklTable extends Vue {
 </script>
 
 <style scoped lang="scss">
+.table {
+  width: 100%;
+}
 </style>

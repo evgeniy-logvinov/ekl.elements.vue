@@ -34,7 +34,18 @@ export default class EklTableHeader extends Vue {
   width: 100%;
   .header {
     padding: 8px;
+    padding-right: 20px;
     text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 1px;
+    .icon {
+      position: absolute;
+      top: 25%;
+      right: 10px;
+      cursor: pointer;
+    }
   }
 }
 </style>

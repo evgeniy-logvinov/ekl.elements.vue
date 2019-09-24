@@ -43,23 +43,18 @@ export default class EklTableRow extends Vue {
 .table-body {
   width: 100%;
   .cell {
-    // white-space: nowrap;
-    text-align: left;
-    //   text-overflow: ellipsis;
-    //   overflow: hidden;
-    //   // max-width: 1px;
-    //   min-width: 0;
     padding: 8px;
-    // span {
-    //   white-space: nowrap;
-    //   overflow: hidden;
-    //   text-overflow: ellipsis;
-    // }
+    padding-right: 20px;
+    text-align: left;
+    max-width: 1px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
-  // tr {
-  //   background-color: white;
-  //   border-radius: 4px;
-  //   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08);
-  // }
+  tr {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08);
+  }
 }
 </style>
