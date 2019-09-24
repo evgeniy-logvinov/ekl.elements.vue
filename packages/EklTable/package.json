@@ -1,12 +1,12 @@
 {
     "name": "@eklogvinov/ekl-table",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publishConfig": {
         "access": "public"
     },
     "dependencies": {
-        "@eklogvinov/ekl-table-header": "^1.0.2",
-        "@eklogvinov/ekl-table-row": "^1.0.2",
+        "@eklogvinov/ekl-table-header": "^1.0.3",
+        "@eklogvinov/ekl-table-row": "^1.0.3",
         "@fortawesome/fontawesome-svg-core": "^1.2.22",
         "@fortawesome/free-solid-svg-icons": "^5.10.2",
         "@fortawesome/vue-fontawesome": "^0.1.7",
