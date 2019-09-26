@@ -1,4 +1,4 @@
-# vue-table
+# ekl-elements-table
 Table component on vue with Resize columns
 
 **Badges**

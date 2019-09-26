@@ -1,6 +1,6 @@
 <template>
   <tbody class="table-body">
-    <tr v-for="row in rows" :key="row.name.first">
+    <tr v-for="row in rows" :key="row.id">
       <td
         v-for="column in columns"
         :key="column.name"

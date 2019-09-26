@@ -17,8 +17,21 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faSort,
+  faSortDown,
+  faSortUp
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome';
 
-@Component
+library.add(faSort, faSortDown, faSortUp);
+
+@Component({
+  components: {
+    FontAwesomeIcon,
+  }
+})
 export default class EklTableHeader extends Vue {
   @Prop({
     type: Array,

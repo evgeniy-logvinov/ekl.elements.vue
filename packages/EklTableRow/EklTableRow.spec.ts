@@ -1,19 +1,26 @@
 import { shallowMount } from '@vue/test-utils';
 import EklTableRow from './EklTableRow.vue';
+import rows from './data/rows';
+import columns from './data/columns';
 
 describe('EklTableRow.vue', () => {
-    it('renders props.msg when passed', () => {
-        const msg = 'new message';
-        const wrapper = shallowMount(EklTableRow, {
-            propsData: { values: ['test'] },
+    let wrapper;
+
+    beforeEach(() => {
+        wrapper = shallowMount(EklTableRow, {
+            propsData: { columns, rows },
         });
-        expect(wrapper.text()).toMatch(msg);
     });
-    it('renders props.msg when not passed', () => {
-        const msg = 'new message';
-        const wrapper = shallowMount(EklTableRow, {
-            propsData: { values: ['test'] },
-        });
-        expect(wrapper.text()).toMatch('test2');
+
+    it('renders props.rows all', () => {
+        expect(wrapper.findAll('tr').length).toBe(rows.length);
+    });
+
+    it('renders all td', () => {
+        expect(wrapper.findAll('td').length).toBe(rows.length * columns.length);
+    });
+
+    it('renders tbody', () => {
+        expect(wrapper.find('tbody').exists()).toBe(true);
     });
 });

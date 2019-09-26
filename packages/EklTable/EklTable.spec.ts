@@ -1,19 +1,24 @@
-import { shallowMount } from '@vue/test-utils';
+import { shallowMount, mount } from '@vue/test-utils';
 import EklTable from './EklTable.vue';
+import EklTableHeader from "@eklogvinov/ekl-table-header/EklTableHeader";
+import EklTableRow from "@eklogvinov/ekl-table-row/EklTableRow";
+import rows from './data/rows';
+import columns from './data/columns';
 
 describe('EklTable.vue', () => {
-    it('renders props.msg when passed', () => {
-        const msg = 'new message';
-        const wrapper = shallowMount(EklTable, {
-            propsData: { msg },
+    let wrapper;
+
+    beforeEach(() => {
+        wrapper = mount(EklTable, {
+            propsData: { columns, rows },
         });
-        expect(wrapper.text()).toMatch(msg);
     });
-    it('renders props.msg when not passed', () => {
-        const msg = 'new message';
-        const wrapper = shallowMount(EklTable, {
-            propsData: { msg },
-        });
-        expect(wrapper.text()).toMatch('test2');
+
+    it('renders EklTableHeader', () => {
+        expect(wrapper.find(EklTableHeader).is(EklTableHeader)).toBe(true);
+    });
+
+    it('renders EklTableRow', () => {
+        expect(wrapper.find(EklTableRow).is(EklTableRow)).toBe(true);
     });
 });
